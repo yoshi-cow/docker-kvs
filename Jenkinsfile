@@ -9,7 +9,6 @@ pipeline {
   stages {
     stage('Pre Check') {
       steps {
-        sh "echo $USER"
         sh "test -f ~/.docker/config.json"
         sh "cat ~/.docker/config.json | grep docker.io"
       }
